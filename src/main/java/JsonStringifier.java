@@ -11,7 +11,7 @@ public final class JsonStringifier {
     public static String stringifyObject(Object object) throws IllegalAccessException {
         Class<?> objectClass = object.getClass();
 
-        if(Primitives.isPrimitive(objectClass) || objectClass.isPrimitive()) {
+        if(PrimitiveUtils.isPrimitive(objectClass) || objectClass.isPrimitive()) {
             return stringifyPrimitive(object);
 
         } else if(objectClass.isArray()) {
@@ -107,31 +107,31 @@ public final class JsonStringifier {
     public static String stringifyPrimitive(Object object) {
         Class<?> objectClass = object.getClass();
 
-        if(Primitives.isBoolean(objectClass)) {
+        if(PrimitiveUtils.isBoolean(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isByte(objectClass)) {
+        } else if(PrimitiveUtils.isByte(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isShort(objectClass)) {
+        } else if(PrimitiveUtils.isShort(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isInteger(objectClass)) {
+        } else if(PrimitiveUtils.isInteger(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isLong(objectClass)) {
+        } else if(PrimitiveUtils.isLong(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isFloat(objectClass)) {
+        } else if(PrimitiveUtils.isFloat(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isDouble(objectClass)) {
+        } else if(PrimitiveUtils.isDouble(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isCharacter(objectClass)) {
+        } else if(PrimitiveUtils.isCharacter(objectClass)) {
             return String.valueOf(object);
 
-        } else if(Primitives.isString(objectClass)) {
+        } else if(PrimitiveUtils.isString(objectClass)) {
             return JsonUtils.wrapString(String.valueOf(object));
 
         } else {

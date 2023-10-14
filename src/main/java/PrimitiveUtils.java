@@ -1,6 +1,6 @@
-public final class Primitives {
+public final class PrimitiveUtils {
 
-    private Primitives() {
+    private PrimitiveUtils() {
         // Empty Constructor
     }
 
